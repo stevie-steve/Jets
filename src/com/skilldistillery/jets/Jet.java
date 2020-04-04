@@ -20,7 +20,8 @@ public abstract class Jet {
 	}
 
 	public void fly() {
-		System.out.println(this);
+		System.out.println("Jet [type=" + type + ", model=" + model + ", speed=" + speed + ", range=" + range + ", price=" + price
+				+ "]");
 	}
 
 	public double speedInMach(double speed, double range) {

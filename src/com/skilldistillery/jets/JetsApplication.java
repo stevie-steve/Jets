@@ -2,8 +2,6 @@ package com.skilldistillery.jets;
 
 import java.util.Scanner;
 
-import com.skilldistillery.foodtruck.FoodTruck;
-
 public class JetsApplication {
 	String jetFile = "JetFile.csv";
 	private AirField airField = new AirField(jetFile);
@@ -31,8 +29,8 @@ public class JetsApplication {
 		System.out.println("2. Fly all jets");
 		System.out.println("3. View fastest jet");
 		System.out.println("4. View jet with longest range");
-		System.out.println("5 .Load all Cargo Jets");
-		System.out.println("6 .Dogfight!");
+		System.out.println("5. Load all Cargo Jets");
+		System.out.println("6. Dogfight!");
 		System.out.println("7. Add a jet to Fleet");
 		System.out.println("8. Remove a jet from Fleet");
 		System.out.println("9. Quit ");
@@ -52,49 +50,48 @@ public class JetsApplication {
 
 			}
 			if (choice == 3) {
-				// fastestJet();
-
+				airField.fastestJet();
+				System.out.println();
 			}
-			System.out.println();
 
-		}
-		if (choice == 4) {
-			// longestRange();
-			System.out.println();
-		}
-		if (choice == 5) {
-			// load();
-			System.out.println();
-		}
-		if (choice == 6) {
-			// fight();
-			System.out.println();
-		}
-		if (choice == 7) {
-			airField.add(sc);
-			// createNewJets();
-			// loop, determine my own amount
-			System.out.println();
-		}
-		if (choice == 8) {
-			// remove();
-			System.out.println();
-		}
+			if (choice == 4) {
+				airField.longestRangeJet();
+				System.out.println();
+			}
+			if (choice == 5) {
+				// load();
+				System.out.println();
+			}
+			if (choice == 6) {
+				// fight();
+				System.out.println();
+			}
+			if (choice == 7) {
+				airField.add(sc);
+				// createNewJets();
+				// loop, determine my own amount
+				System.out.println();
+			}
+			if (choice == 8) {
+				// remove();
+				System.out.println();
+			}
 
-		if (choice == 9) {
-			System.out.println("Goodbye");
-			System.exit(0);
+			if (choice == 9) {
+				System.out.println("Goodbye");
+				System.exit(0);
+			}
+			System.out.println("Choose an option from the below list: ");
+			System.out.println("1. List fleet");
+			System.out.println("2. Fly all jets");
+			System.out.println("3. View fastest jet");
+			System.out.println("4. View jet with longest range");
+			System.out.println("5  Load all Cargo Jets");
+			System.out.println("6  Dogfight!");
+			System.out.println("7. Add a jet to Fleet");
+			System.out.println("8. Remove a jet from Fleet");
+			System.out.println("9. Quit ");
+			choice = sc.nextInt();
 		}
-		System.out.println("Choose an option from the below list: ");
-		System.out.println("1. List fleet");
-		System.out.println("2. Fly all jets");
-		System.out.println("3. View fastest jet");
-		System.out.println("4. View jet with longest range");
-		System.out.println("5  Load all Cargo Jets");
-		System.out.println("6  Dogfight!");
-		System.out.println("7. Add a jet to Fleet");
-		System.out.println("8. Remove a jet from Fleet");
-		System.out.println("9. Quit ");
-		choice = sc.nextInt();
 	}
 }

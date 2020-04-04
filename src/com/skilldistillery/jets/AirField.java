@@ -76,9 +76,39 @@ public class AirField {
 
 	public void flyAllJets() {
 		for (int i = 0; i < jetList.size(); i++) {
-			System.out.println(this);
+			jetList.get(i).fly();
 		}
 	}
 
-// public void remove() {
+	public void fastestJet() {
+		Jet compare = jetList.get(0);
+		double fastestSpeed = jetList.get(0).getSpeed();
+		for (int i = 0; i < jetList.size(); i++) {
+			if (jetList.get(i) != null) {
+				if (fastestSpeed < jetList.get(i).getSpeed()) {
+					fastestSpeed = jetList.get(i).getSpeed();
+					compare = jetList.get(i);
+				}
+			}
+		}
+		System.out.println(compare.toString());
+		System.out.println();
+	}
+
+	public void longestRangeJet() {
+		Jet compare = jetList.get(0);
+		double longestRange = jetList.get(0).getRange();
+		for (int i = 0; i < jetList.size(); i++) {
+			if (jetList.get(i) != null) {
+				if (longestRange < jetList.get(i).getRange()) {
+					longestRange = jetList.get(i).getRange();
+					compare = jetList.get(i);
+				}
+			}
+		}
+		System.out.println(compare.toString());
+		System.out.println();
+
+	}
 }
+// public void remove() {
