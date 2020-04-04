@@ -91,7 +91,7 @@ public class AirField {
 				}
 			}
 		}
-		System.out.println(compare.toString());
+		System.out.println("The following jet has the fastest capable speed: " + compare.toString());
 		System.out.println();
 	}
 
@@ -106,9 +106,33 @@ public class AirField {
 				}
 			}
 		}
-		System.out.println(compare.toString());
+		System.out.println("The following jet has the longest range: " + compare.toString());
 		System.out.println();
 
 	}
+
+	public void load() {
+		for (Jet jet : jetList) {
+			if (jet != null) {
+				if (jet instanceof CargoPlane) {
+					((CargoPlane) jet).load();
+				}
+
+			}
+		}
+	}
+
+	public void fight() {
+		for (Jet jet : jetList) {
+			if (jet != null) {
+				if (jet instanceof FighterJet) {
+					((FighterJet) jet).fight();
+				}
+
+			}
+		}
+	}
+ public void remove() {
+	 
+ }
 }
-// public void remove() {

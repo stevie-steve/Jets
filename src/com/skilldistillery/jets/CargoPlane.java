@@ -1,6 +1,6 @@
 package com.skilldistillery.jets;
 
-public class CargoPlane extends Jet { // Implements CargoCarrier{
+public class CargoPlane extends Jet implements CargoCarrier{
 
 	public CargoPlane() {
 
@@ -9,15 +9,16 @@ public class CargoPlane extends Jet { // Implements CargoCarrier{
 	@Override
 	public void fly() {
 		super.fly();
-		System.out.println("i fly slow");
+		System.out.println("I fly slow");
 	}
 
 	public void load() {
-
+		System.out.println("Load me up!");
 	}
 
-	public void getMachSpeed() {
-
+	@Override
+	public double speedInMach(double speed, double range) {
+		return super.speedInMach(speed, range);
 	}
 
 	public CargoPlane(String type, String model, double speed, int range, double price) {

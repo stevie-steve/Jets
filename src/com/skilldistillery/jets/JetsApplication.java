@@ -59,11 +59,11 @@ public class JetsApplication {
 				System.out.println();
 			}
 			if (choice == 5) {
-				// load();
+				airField.load();
 				System.out.println();
 			}
 			if (choice == 6) {
-				// fight();
+				airField.fight();
 				System.out.println();
 			}
 			if (choice == 7) {

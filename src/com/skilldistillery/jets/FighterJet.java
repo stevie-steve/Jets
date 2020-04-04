@@ -1,6 +1,6 @@
 package com.skilldistillery.jets;
 
-public class FighterJet extends Jet { // Implements CombatReady{
+public class FighterJet extends Jet implements CombatReady{
 
 	public FighterJet() {
 
@@ -13,11 +13,13 @@ public class FighterJet extends Jet { // Implements CombatReady{
 	} 
 
 	public void fight() {
+		System.out.println("Shoot Shoot, Bang Bang");
 
 	}
 
-	public void getMachSpeed() {
-
+	@Override
+	public double speedInMach(double speed, double range) {
+		return super.speedInMach(speed, range);
 	}
 
 	public FighterJet(String type, String model, double speed, int range, double price) {
