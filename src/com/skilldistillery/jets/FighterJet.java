@@ -9,11 +9,14 @@ public class FighterJet extends Jet implements CombatReady{
 	@Override
 	public void fly() {
 		super.fly();
-		System.out.println("I fly fast");
+		System.out.println("I fly fast.");
+		System.out.println();
 	} 
 
 	public void fight() {
-		System.out.println("Shoot Shoot, Bang Bang");
+		System.out.println(this.getModel() + " coming in guns blazing!");
+		System.out.println("*Shoot Shoot, Bang Bang*");
+		System.out.println();
 
 	}
 
@@ -24,7 +27,7 @@ public class FighterJet extends Jet implements CombatReady{
 
 	public FighterJet(String type, String model, double speed, int range, double price) {
 		super(type, model, speed, range, price);
-		// TODO Auto-generated constructor stub
+
 	}
 
 }

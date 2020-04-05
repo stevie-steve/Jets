@@ -68,12 +68,10 @@ public class JetsApplication {
 			}
 			if (choice == 7) {
 				airField.add(sc);
-				// createNewJets();
-				// loop, determine my own amount
 				System.out.println();
 			}
 			if (choice == 8) {
-				// remove();
+				airField.remove(sc);
 				System.out.println();
 			}
 

@@ -126,13 +126,31 @@ public class AirField {
 		for (Jet jet : jetList) {
 			if (jet != null) {
 				if (jet instanceof FighterJet) {
+					System.out.println();
 					((FighterJet) jet).fight();
+
 				}
 
 			}
 		}
 	}
- public void remove() {
-	 
- }
-}
+
+	public void remove(Scanner sc) {
+        int counter = 0;
+        for (Jet jet : jetList) {	
+            counter++;
+            System.out.println(counter + ". " +jet);
+        } 
+		System.out.print("Choose the number of the jet to remove: ");
+		  int removedJetNumber = sc.nextInt();
+            jetList.remove(removedJetNumber-1);
+            System.out.println();
+            System.out.println("This lis now your list of Jets");
+            displayAllJets();
+            System.out.println();
+        
+    }
+
+	}
+
+

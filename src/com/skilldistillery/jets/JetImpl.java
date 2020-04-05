@@ -1,7 +1,5 @@
 package com.skilldistillery.jets;
 
-import java.util.Scanner;
-
 public class JetImpl extends Jet {
 
 	@Override

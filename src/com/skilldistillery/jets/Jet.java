@@ -20,8 +20,13 @@ public abstract class Jet {
 	}
 
 	public void fly() {
-		System.out.println("Jet [type=" + type + ", model=" + model + ", speed=" + speed + ", range=" + range + ", price=" + price
+		System.out.println("Jet [type=" + type + ", model=" + model + ", speed=" + speed + ", range=" + range + ", price= $" + price
 				+ "]");
+		int machSpeed = (int)speed / 767;
+		System.out.println("This jet can reach MOCH" + machSpeed + ".");
+		double flightTime =(range / speed);
+		System.out.printf(flightTime + " Hours of flight time");
+		System.out.println();
 	}
 
 	public double speedInMach(double speed, double range) {
