@@ -1,6 +1,6 @@
 package com.skilldistillery.jets;
 
-public class FighterJet extends Jet implements CombatReady{
+public class FighterJet extends Jet implements CombatReady {
 
 	public FighterJet() {
 
@@ -11,7 +11,7 @@ public class FighterJet extends Jet implements CombatReady{
 		super.fly();
 		System.out.println("I fly fast.");
 		System.out.println();
-	} 
+	}
 
 	public void fight() {
 		System.out.println(this.getModel() + " coming in guns blazing!");

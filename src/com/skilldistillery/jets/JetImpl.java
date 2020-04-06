@@ -7,8 +7,7 @@ public class JetImpl extends Jet {
 		super.fly();
 		System.out.println("i fly at the speed i fly at");
 	}
-		
-		
+
 	public JetImpl(String type, String model, double speed, int range, double price) {
 		super(type, model, speed, range, price);
 

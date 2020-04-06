@@ -8,19 +8,17 @@ public class JetsApplication {
 	Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
-
 		JetsApplication jetsApp = new JetsApplication();
+
+		System.out.println("Welcome to the Jet App, where you can oversee your whole fleet.\n" );
 		jetsApp.run();
 	}
 
 	private void run() {
-		launch();
 		displayUserMenu();
 	}
 
-	private void launch() {
-		System.out.println("right here it calls new airfield XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
-	}
+
 
 	private void displayUserMenu() {
 

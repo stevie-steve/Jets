@@ -6,26 +6,26 @@ public abstract class Jet {
 	private double speed;
 	private int range;
 	private double price;
-	
+
 	public Jet(String type, String model, double speed, int range, double price) {
 		super();
 		this.type = type;
-		this.model = model; 
+		this.model = model;
 		this.speed = speed;
 		this.range = range;
 		this.price = price;
 	}
 
-	public Jet() {	
+	public Jet() {
 	}
 
 	public void fly() {
-		System.out.println("Jet [type=" + type + ", model=" + model + ", speed=" + speed + ", range=" + range + ", price= $" + price
-				+ "]");
-		int machSpeed = (int)speed / 767;
+		System.out.println("Jet [Type=" + type + ", Model=" + model + ", Speed=" + speed + " MPH , Range=" + range
+				+ " miles , Price= $" + price + "]");
+		int machSpeed = (int) speed / 767;
 		System.out.println("This jet can reach MOCH" + machSpeed + ".");
-		double flightTime =(range / speed);
-		System.out.printf(flightTime + " Hours of flight time");
+		double flightTime = (range / speed);
+		System.out.printf(flightTime + " Hours of flight time. ");
 		System.out.println();
 	}
 
@@ -34,7 +34,7 @@ public abstract class Jet {
 		return mach;
 
 	}
- 
+
 	public String getType() {
 		return type;
 	}
@@ -101,7 +101,7 @@ public abstract class Jet {
 			return true;
 		if (obj == null)
 			return false;
-		if (getClass() != obj.getClass()) 
+		if (getClass() != obj.getClass())
 			return false;
 		Jet other = (Jet) obj;
 		if (range != other.range)
